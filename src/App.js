@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import EmpListing from './EmpListing';
@@ -12,9 +12,11 @@ function App() {
       <h1>React JS CRUD Opertations</h1>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<EmpListing />}></Route>
+         <Route path='/' element={<EmpListing />} />
           <Route path='/employee/create' element={<EmpCreate />}></Route>
 
+          <Route path='/employee/importDataForm' element={<importDataForm/>}></Route>
+          
           <Route path='/employee/detail/:empid' element={<EmpDetail />}></Route>
           <Route path='/employee/edit/:empid' element={<EmpEdit />}></Route>
         </Routes>
